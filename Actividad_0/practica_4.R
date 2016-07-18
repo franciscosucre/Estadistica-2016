@@ -29,11 +29,11 @@ peorJuez = max(judgeScores)
 # Parte III ---------------------------------------------------------------
 
 # Obtenemos el promedio de todos los puntajes
-summary(judgeScores)
+summaryTotal = summary(judgeScores)
 # Segun summary el promedio
 scoreAverage = 90.88
 # Obtenemos el promedio de las pruebas
-summary(USJudgeRatings)
+summaryOriginal = summary(USJudgeRatings)
 # Los promedios de las pruebas son:
 contAverage = 7.437
 intgAverage = 8.021
