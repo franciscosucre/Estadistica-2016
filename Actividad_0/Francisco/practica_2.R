@@ -19,9 +19,12 @@ b <- 1:10
 
 # Parte III -----------------------------------------------------------------
 
-a+b #It actually isn't well defined, but R doesn't cares, it just solves it with the repetition trick.
-a-b #Basically, it completes 'a' so it matches 'b' in size, repeating the elements.
-a*b #So 'a' acts as (1,2,3,4,5,1,2,3,4,5) for the purposes of these 3 operations.
+a+b 
+a-b 
+a*b 
+
+# No esta bien definido pero R resuelve este problema utilizando repeticiones
+# para que se pueda efetuar la operacion
 
 # Parte IV -----------------------------------------------------------------
 
