@@ -10,12 +10,44 @@
 
 # Parte I -----------------------------------------------------------------
 
+data("USJudgeRatings")
+# Muestra los datos del tipo de datos
+?USJudgeRatings
+# La tabla contiene un conjunto de puntuaciones del 1 al 10 en distintas
+# caracteristicas de cada juez
+
 
 # Parte II ----------------------------------------------------------------
 
+# Calculamos la puntuacion total de todos los jueces
+judgeScores = rowSums(USJudgeRatings)
+# Calculamos la mayor puntuacion
+mejorJuez = max(judgeScores)
+# Calculamos la menor puntuacion
+peorJuez = max(judgeScores)
 
 # Parte III ---------------------------------------------------------------
 
+# Obtenemos el promedio de todos los puntajes
+summary(judgeScores)
+# Segun summary el promedio
+scoreAverage = 90.88
+# Obtenemos el promedio de las pruebas
+summary(USJudgeRatings)
+# Los promedios de las pruebas son:
+contAverage = 7.437
+intgAverage = 8.021
+dmnrAverage = 7.516
+dilgAverage = 7.693
+cfmgAverage = 7.479
+deciAverage = 7.565
+prepAverage = 7.467
+famiAverage = 7.488
+oralAverage = 7.293
+writAverage = 7.384
+physAverage = 7.935
+rtenAverage = 7.602
 
 # Parte IV ----------------------------------------------------------------
-
+# Oredenmos a los jueces segun su puntuacion
+orderedJudges = sort(judgeScores,decreasing = TRUE)
