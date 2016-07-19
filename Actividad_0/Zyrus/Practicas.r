@@ -3,7 +3,7 @@
 #1
 esc <- 11:15
 #2
-vec <- seq(1:19, 2)
+vec <- seq(1,19,2)
 #3
 x <- c(esc,vec)
 #4
@@ -70,7 +70,7 @@ subset(USJudgeRatings, rowSums(USJudgeRatings) == max(rowSums(USJudgeRatings))) 
 subset(USJudgeRatings, rowSums(USJudgeRatings) == min(rowSums(USJudgeRatings))) #Same thing, but with min now.
 #3
 summary(rowSums(USJudgeRatings)) #This is just the summary of the scoring from all judges, mean is obtained here.
-summary(UsJudgeRatings) #This is for each individual test, mean is also obtained here.
+summary(USJudgeRatings) #This is for each individual test, mean is also obtained here.
 #4
 USJudgeRatings[order(rowSums(USJudgeRatings)),] #Notice order is used to sort dataframes, we're just sorting them by scores.
 
