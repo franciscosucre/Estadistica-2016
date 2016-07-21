@@ -42,14 +42,20 @@ boxplot(X, main = "Desigualdad de ingresos", ylab = "Numero de familias por cada
 #3
 
 #Mostrando ambos graficos lado a lado para facil comparacion
-hist(R[S==0], main = "Indice de Criminalidad", xlab = "Numero de delitos por millon de habitantes", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
-hist(R[S==1], main = "Indice de Criminalidad", xlab = "Numero de delitos por millon de habitantes", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
+#Creando los breakpoints para el histograma, se necesitan los mismos para poder ser comparables
+breakpoints <- c(20,40,60,80,100,120,140,160,180,200)
+hist(R[S==0], breaks = breakpoints, main = "Indice de Criminalidad", xlab = "Numero de delitos por millon de habitantes", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
+hist(R[S==1], breaks = breakpoints, main = "Indice de Criminalidad", xlab = "Numero de delitos por millon de habitantes", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
 
-hist(LF[S==0], main = "Participacion en trabajos de fuerza", xlab = "Participacion por cada mil hombres", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
-hist(LF[S==1], main = "Participacion en trabajos de fuerza", xlab = "Participacion por cada mil hombres", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
+#Nuevos breakpoints para nuevos datos
+breakpoints <- c(480,500,520,540,560,580,600,620,640,660)
+hist(LF[S==0], breaks = breakpoints, main = "Participacion en trabajos de fuerza", xlab = "Participacion por cada mil hombres", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
+hist(LF[S==1], breaks = breakpoints, main = "Participacion en trabajos de fuerza", xlab = "Participacion por cada mil hombres", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
 
-hist(X[S==0], main = "Desigualdad de ingresos", xlab = "Numero de familias por cada mil", ylab = "Frecuencia", col = c("blue","darkblue"))
-hist(X[S==1], main = "Desigualdad de ingresos", xlab = "Numero de familias por cada mil", ylab = "Frecuencia", col = c("blue","darkblue"))
+#De nuevo, nuevos datos, nuevos breakpoints
+breakpoints <- c(120,140,160,180,200,220,240,260,280)
+hist(X[S==0], breaks = breakpoints, main = "Desigualdad de ingresos", xlab = "Numero de familias por cada mil", ylab = "Frecuencia", col = c("blue","darkblue"))
+hist(X[S==1], breaks = breakpoints, main = "Desigualdad de ingresos", xlab = "Numero de familias por cada mil", ylab = "Frecuencia", col = c("blue","darkblue"))
 
 #Ahora mostrando los boxplots en una misma grafica para facil comparacion
 par(mfrow = c(1,1))
