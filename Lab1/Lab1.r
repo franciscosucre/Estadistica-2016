@@ -1,3 +1,8 @@
+# Laboratorio 1
+# Estadistica Para Ingenieros
+# Francisco Sucre 10-10717
+# José Cipagauta 05-38040
+
 #Primero, se necesitan los datos, attach para facil acceso despues.
 data = read.table("IndiceCrim.dat", header = T)
 attach(data)
@@ -11,6 +16,15 @@ sd(R) #Desviacion estandar
 range(R) #Rango
 IQR(R) #Rango intercuartil
 
+# Analisis: Con estos datos podemos ver en primer lugar que el indice de criminalidad
+# es muy variante entre los estados, teniendo en cuenta que el maximo es 199, que la
+# desviacion estandar sea 38 (casi un quarto del valor) indica que los valores estan
+# muy dispersos. Si vemos ìel resto de las medidas podemos ver que 
+# que los datos estan distribuidos de una manera relativamente uniforme, aunque si vemos
+# el 3er cuartil podemos ver que el aumento es mayor despues de 105 hasta llegar en 190,
+# Asi que podemos ver un diferencia notable en estos estados, una diferencia que si es
+# causada por datos errados entonces afecta de manera grave al resto de las medidas.
+
 #LF = Proporcion en participacion en trabajos de fuerza por cada mil hombres con edad 14-24.
 summary(LF)
 var(LF)
@@ -18,12 +32,23 @@ sd(LF)
 range(LF)
 IQR(LF)
 
+# Analisis: En este caso podemos ver que los datos no se encuentran tan dispersos, ya que
+# la desviacion estandar es mas pequeña en comparacion al maximo de los datos, los datos tambien
+# tienen una distribucion relativamente uniforme, en el 75% de los estados no se llega a una 
+# proporsicion de 600
+
 #X = Desigualdad en ingresos, el numero de familias por mil que ganan por debajo de la mitad de la mediana de ingresos.
 summary(X)
 var(X)
 sd(X)
 range(X)
 IQR(X)
+
+# Analisis: Podemos ver que los datos no andan muy disperos ya que la desviacion
+# estandar no se encuentra en una proporsicion tan eleveada comparada con el rango
+# de los valores, tambien podemos ver que la mediana es algo distinta pero no es tanta la
+# diferencia, podemos ver tambien que hay una distribucion relativamente uniforme en los datos,
+# estando el 25% de las muestras por encima de 230 y 25% por debajo de 165
 
 #2
 
