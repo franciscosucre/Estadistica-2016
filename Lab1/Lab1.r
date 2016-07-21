@@ -58,11 +58,29 @@ par(mfrow = c(1,2))
 hist(R, main = "Indice de Criminalidad", xlab = "Numero de delitos por millon de habitantes", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
 boxplot(R, main = "Indice de criminalidad", ylab = "Numero de delitos por millon de habitantes", col = c("blue"))
 
+# En estos graficos podemos facilmente observar que los indices de criminalidad mas comunes
+# estan entre 50 y 100, teniendo un segundo grupo importante entre 100 y 150, y el resto
+# se refieren a casos mas aislados, y como podemos ver en el grafico de caja, las muestras
+# de mayor valor parecen ser datos atipicos y podrian indicar algun dato erroneo, en general
+# el indice de criminalidad es bastante bajo
+
 hist(LF, main = "Participacion en trabajos de fuerza", xlab = "Participacion por cada mil hombres", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
 boxplot(LF, main = "Participacion en trabajos de fuerza", ylab = "Participacion por cada mil hombres", col = c("blue"))
 
+# En los graficos podemos ver que en el caso de esta variable hay una distrubucion mas uniforme
+# de los valores, habiendo una concentracion relativamente parecida entre 500 y 550, y la clase
+# de 550 a 600, aunque el resto de las clas aun presentan un numero considerable de muestras,
+# en el grafico de caja podemos ver reflejado esto, y se ve perfectamente que entre esas dos
+# clases hay una concentracion similar y en esas 2 clases en es donde se encuentran la mayoria
+# de las muestras
+
 hist(X, main = "Desigualdad de ingresos", xlab = "Numero de familias por cada mil", ylab = "Frecuencia", col = c("blue","darkblue"))
 boxplot(X, main = "Desigualdad de ingresos", ylab = "Numero de familias por cada mil", col = c("blue"))
+
+# En los graficos podemos ver que en el caso de esta variable tenemos una distrubucion diferente,
+# a los graficos anteriores, aunque no hay datos lo suficientemente dispersos para considerarse
+# atipicos, si podemos ver que el segundo cuartil los datos son muy parecidos mientras que en
+# en el 3ro los datos son mucho mas dispersos
 
 #3
 
