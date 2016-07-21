@@ -87,18 +87,29 @@ boxplot(X, main = "Desigualdad de ingresos", ylab = "Numero de familias por cada
 #Mostrando ambos graficos lado a lado para facil comparacion
 #Creando los breakpoints para el histograma, se necesitan los mismos para poder ser comparables
 breakpoints <- c(20,40,60,80,100,120,140,160,180,200)
-hist(R[S==0], breaks = breakpoints, main = "Indice de Criminalidad", xlab = "Numero de delitos por millon de habitantes", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
-hist(R[S==1], breaks = breakpoints, main = "Indice de Criminalidad", xlab = "Numero de delitos por millon de habitantes", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
+hist(R[S==0], breaks = breakpoints, main = "Indice de Criminalidad Norte", xlab = "Numero de delitos por millon de habitantes", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
+hist(R[S==1], breaks = breakpoints, main = "Indice de Criminalidad Sur", xlab = "Numero de delitos por millon de habitantes", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
+
+# En los estados del norte hay una mayor concentracion de muestras, de lo cual podemos 
+# concluir que en el norte hay mayor indice de criminalidad
 
 #Nuevos breakpoints para nuevos datos
 breakpoints <- c(480,500,520,540,560,580,600,620,640,660)
-hist(LF[S==0], breaks = breakpoints, main = "Participacion en trabajos de fuerza", xlab = "Participacion por cada mil hombres", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
-hist(LF[S==1], breaks = breakpoints, main = "Participacion en trabajos de fuerza", xlab = "Participacion por cada mil hombres", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
+hist(LF[S==0], breaks = breakpoints, main = "Participacion en trabajos de fuerza Norte", xlab = "Participacion por cada mil hombres", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
+hist(LF[S==1], breaks = breakpoints, main = "Participacion en trabajos de fuerza Sur", xlab = "Participacion por cada mil hombres", ylab = "Frecuencia", col = c("lightblue","blue","darkblue"))
+
+# En los estados del norte hay una mayor concentracion de muestras y ademas las muestras
+# en el norte son de mayor valor, con lo cual podemos concluir que hay mayor participacion
+# en trabajos de fuerza en los estados del norte
 
 #De nuevo, nuevos datos, nuevos breakpoints
 breakpoints <- c(120,140,160,180,200,220,240,260,280)
-hist(X[S==0], breaks = breakpoints, main = "Desigualdad de ingresos", xlab = "Numero de familias por cada mil", ylab = "Frecuencia", col = c("blue","darkblue"))
-hist(X[S==1], breaks = breakpoints, main = "Desigualdad de ingresos", xlab = "Numero de familias por cada mil", ylab = "Frecuencia", col = c("blue","darkblue"))
+hist(X[S==0], breaks = breakpoints, main = "Desigualdad de ingresos Norte", xlab = "Numero de familias por cada mil", ylab = "Frecuencia", col = c("blue","darkblue"))
+hist(X[S==1], breaks = breakpoints, main = "Desigualdad de ingresos Sur", xlab = "Numero de familias por cada mil", ylab = "Frecuencia", col = c("blue","darkblue"))
+
+# En ambos estados parecen haber concentraciones relativamente similares de datos, pero en
+# los estados del sur las muestras estan concentradas en los valores mas altos, lo cual 
+# demuestra que en los estados del sur hay mayor desigualdad de ingresos
 
 #Ahora mostrando los boxplots en una misma grafica para facil comparacion
 par(mfrow = c(1,1))
