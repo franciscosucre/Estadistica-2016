@@ -1,3 +1,8 @@
+# Laboratorio 1
+# Estadistica Para Ingenieros
+# Francisco Sucre 10-10717
+# José Cipagauta 05-38040
+
 #Primero, se necesitan los datos, attach para facil acceso despues.
 data = read.table("IndiceCrim.dat", header = T)
 attach(data)
