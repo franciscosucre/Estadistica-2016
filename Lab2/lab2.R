@@ -16,6 +16,8 @@ summary(estimator)
 # comprar en la provedurı́a estudiantil antes de que se venda el décimo dorito?
 estimate = estimator$estimate
 sd = estimator$sd
+varianza = sd^2
 
 # Si una hora especı́fica se atienden 50 personas, ¿cuál es la probabilidad de
 # que se vendan más de 10 doritos en esa hora?
+dpois(50, lambda, lower.tail = F)
