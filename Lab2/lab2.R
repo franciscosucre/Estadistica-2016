@@ -3,8 +3,8 @@
 # Francisco Sucre 10-10717
 # José Cipagauta 05-38040
 
-library(MASS) ## Cargando libreria MASS
-#library(stats4) ## No usamos estas, al usar solo fitdistr
+library(MASS) ## Cargando libreria MASS para usar fitdistr
+#library(stats4) ## No usamos esta
 
 data <- scan("personas.txt")
 
