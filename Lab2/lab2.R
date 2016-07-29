@@ -9,4 +9,13 @@ library(stats4) ## loading package stats4
 data <- scan("personas.txt", what=numeric(), sep="")
 
 #1
+estimator=fitdistr(data,"poisson")
+summary(estimator)
 
+# ¿Cuál serı́a el valor esperado y la varianza estimada del número de personas que van a
+# comprar en la provedurı́a estudiantil antes de que se venda el décimo dorito?
+estimate = estimator$estimate
+sd = estimator$sd
+
+# Si una hora especı́fica se atienden 50 personas, ¿cuál es la probabilidad de
+# que se vendan más de 10 doritos en esa hora?
