@@ -87,3 +87,4 @@ qnorm(0.975)
 # 99% para la proporción de ciudadanos con registro de elector.
 
 prop.test(1912,2374,conf.level=0.95)
+
