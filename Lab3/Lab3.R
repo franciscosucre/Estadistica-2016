@@ -122,10 +122,13 @@ t.test(S4,S9,conf.level = 0.97)
 # Podemos ver que la media de S9 es generalmente mayor que la de S4 pero aun asi
 # incluye el 0, por lo cual podrian ser iguales
 
+
 # 4. Si realizan la comparación de los intervalos de confianza entre años, 
 # ¿cómo los comparariría? ¿Qué puede concluir al hacer la comparación?
 
-# Comparacion De Varianzas por años
-var.test(c(S5,S6,S13),c(S3,S4,S9),conf.level = 0.97)
-# Podemos concluir que las medias que las varianzas de ambos años se pueden tomar como 
-# iguales ya que el intervalo de confianza incluye al 1
+# Se compararian los intervalos de confianza de la diferencia de promedio de todas las 
+# notas de las 3 secciones de cada año 
+
+t.test(Notas11_12, Notas12_13, conf.level = 0.97)
+# Podemos concluir que los promedios del año 12_13 es mayor a los promedios del año 11_12 
+# por lo menos en 3 puntos, con un intervalo de confianza del 97%
