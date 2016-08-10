@@ -40,9 +40,8 @@ var.test(Notas12_13$S9, Notas212_13$S9)
 # Una ves conocidas si las varianzas son iguales o no, se procede a realizar pruebas de promedios
 
 t.test(Notas11_12$S5, Notas211_12$S5, var.equal = T, conf.level = 0.97)
-# p-value con exponencial 10 a la -6, para todos los propositos 0, se rechaza H0
-# los promedios son diferentes, las notas del segundo examen tiene un promedio mas alto de por al menos
-# 4.8 puntos con un 97% de confianza
+# p-value con exponencial 10 a la -6, para todos los propositos 0, se rechaza H0 los promedios son diferentes
+# las notas del segundo examen tiene un promedio mas alto de por al menos 4.8 puntos con un 97% de confianza
 
 t.test(Notas11_12$S6, Notas211_12$S6, var.equal = T, conf.level = 0.97)
 # p-value de 0.12, no se rechaza H0 con una significancia de 3%, los promedios son iguales.
@@ -57,9 +56,8 @@ t.test(Notas12_13$S4, Notas212_13$S4, conf.level = 0.97)
 # p-value de 0.75, no se rechaza H0 con una significancia de 3%, los promedios son iguales.
 
 t.test(Notas12_13$S9, Notas212_13$S9,  conf.level = 0.97)
-# p-value de 0.0002, se rechaza H0 con una significancia de 3%, se rechaza H0, los promedios
-# son diferentes, las notas del primer examen tienen un promedio mas alto de por al menos
-# 4.23 puntos con un 97% de confianza
+# p-value de 0.0002, se rechaza H0 con una significancia de 3%, los promedios son diferentes
+# las notas del primer examen tienen un promedio mas alto de por al menos 4.23 puntos con un 97% de confianza
 
 # 2. ¿A qué conclusiones puede llegar si utilizan el p-valor?.
 
