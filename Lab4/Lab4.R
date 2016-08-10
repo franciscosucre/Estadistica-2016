@@ -1,4 +1,4 @@
-# Laboratorio 3
+# Laboratorio 4
 # Estadistica Para Ingenieros
 # Francisco Sucre 10-10717
 # José Cipagauta 05-38040
