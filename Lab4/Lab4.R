@@ -40,7 +40,7 @@ var.test(Notas12_13$S9, Notas212_13$S9)
 # Una vez conocidas si las varianzas son iguales o no, se procede a realizar pruebas de promedios
 
 t.test(Notas11_12$S5, Notas211_12$S5, var.equal = T, conf.level = 0.97)
-# p-value con exponencial 10 a la -6, para todos los propositos 0, se rechaza H0 los promedios son diferentes
+# p-value con exponencial 10 a la -6, para todos los propositos 0, se rechaza H0, concluimos que los promedios son diferentes
 # las notas del segundo examen tiene un promedio mas alto de por al menos 4.8 puntos con un 97% de confianza
 
 t.test(Notas11_12$S6, Notas211_12$S6, var.equal = T, conf.level = 0.97)
