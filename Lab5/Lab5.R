@@ -1,7 +1,33 @@
-# Laboratorio 4
+# Laboratorio 5
 # Estadistica Para Ingenieros
 # Francisco Sucre 10-10717
 # José Cipagauta 05-38040
+
+# 1. Se tienen los datos de las áreas de 747 terrenos, medidos en m2 . Se cree, que por esos
+# datos ser cuadrados, tienen una distribución gamma con parámetros desconocidos.
+#
+# o 
+#
+# 9. En una reconocida cadena de venta de sandwich estudian si deben mantener una variedad en 
+# su menu. En varias tiendas registrán la cantidad de sandwich que venden por hora de esa
+# variedad, recopilando en total 942 datos. Un experto decide estudiar si esos datos pueden 
+# seguir una distribución binomial negativa.
+
+
+# Instrucciones
+# 1. Utilice la función “sample” de R para obtener una muestra de
+# tamaño 300 sin reemplazo de la variable que le corresponde.
+
+# 2. Utilice la función “fitdistr” de la libreria MASS para ajustar el parámetro de la
+# distribución que debe tener los datos de la parte 1.
+
+# 3. Utilice la función “hist( * , plot =F)” para obtener una tabla de frecuencias de los
+# datos de la parte 1. Adapte dicha tabla para poder realizar la bondad de ajuste. 
+
+# 4.Calcule el estadı́stico X 2 correspondiente a la prueba χ2, y diga si rechaza
+# o no la hipótesis nula para un nivel de significancia del 8 %, calculando
+# tanto la región de rechazo del estadı́stico, como el p-valor.
+
 
 # Se tienen las notas de dos examenes de tres secciones de un mismo curso. 
 # Los examenes son evaluados sobre 100 puntos.
