@@ -42,13 +42,13 @@ significacia = 0.08
 counts = histogram$counts
 gradosLibertad = 2
 
-probando = pgamma(histogram$breaks[2:8],alpha,beta) - pgamma(histogram$breaks[1:7],alpha,beta)
-esperado = total * probando
+probabilidad = pgamma(histogram$breaks[2:8],alpha,beta) - pgamma(histogram$breaks[1:7],alpha,beta)
+esperado = total * probabilidad
 
 chi2 = sum(((counts - esperado)**2)/(esperado))
 
 # Region De Rechazo
-chi2_alpha=qchisq(1-significacia,length(counts)-1 - gradosLibertad)
+chi2_alpha=qchisq(1-significacia,gradosLibertad)
 chi2_alpha
 # Como el estadistico no cayo en la region de rechazo, los datos
 # pudieron haber sido generados con una distribucion gamma
