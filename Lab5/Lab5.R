@@ -18,8 +18,8 @@ dist = scan("dist.txt")
 # Instrucciones
 # 1. Utilice la función “sample” de R para obtener una muestra de
 # tamaño 300 sin reemplazo de la variable que le corresponde.
-
-prueba = sample(dist,300,FALSE)
+total=300
+prueba = sample(dist,total,FALSE)
 
 # 2. Utilice la función “fitdistr” de la libreria MASS para ajustar el parámetro de la
 # distribución que debe tener los datos de la parte 1.
@@ -42,8 +42,8 @@ significacia = 0.08
 counts = histogram$counts
 gradosLibertad = 2
 
-probabilidad = (1/(gamma(alpha) * (beta**alpha))) * counts**(alpha-1) * exp(counts/beta)
-esperado = counts * probabilidad
+probabilidad = (1/(gamma(alpha) * (beta**alpha))) * (counts**(alpha-1)) * exp(-(counts/beta))
+esperado = total * probabilidad
 
 chi2 = sum(((counts - esperado)**2)/(esperado))
 
@@ -54,5 +54,6 @@ chi2_alpha
 # pudieron haber sido generados con una distribucion gamma
 
 
-p_valor=1-pchisq(chi2, length(counts)-1 - gradosLibertad)
+p_valor=1-pchisq(chi2, 111111)
 p_valor
+
