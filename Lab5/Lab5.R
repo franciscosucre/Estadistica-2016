@@ -37,10 +37,22 @@ histogram = hist(prueba,plot=F)
 
 # 4.Calcule el estadı́stico X 2 correspondiente a la prueba χ2, y diga si rechaza
 # o no la hipótesis nula para un nivel de significancia del 8 %, calculando
-# tanto la región de rechazo del estadı́stico, como el p-valor
+# tanto la región de rechazo del estadı́stico, como el p-valo
+significacia = 0.08
 counts = histogram$counts
+gradosLibertad = 2
 
 probabilidad = (1/(gamma(alpha) * (beta**alpha))) * counts**(alpha-1) * exp(counts/beta)
 esperado = counts * probabilidad
 
 chi2 = sum(((counts - esperado)**2)/(esperado))
+
+# Region De Rechazo
+chi2_alpha=qchisq(1-significacia,length(counts)-1 - gradosLibertad)
+chi2_alpha
+# Como el estadistico no cayo en la region de rechazo, los datos
+# pudieron haber sido generados con una distribucion gamma
+
+
+p_valor=1-pchisq(chi2, length(counts)-1 - gradosLibertad)
+p_valor
