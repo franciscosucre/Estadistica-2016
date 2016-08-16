@@ -40,20 +40,20 @@ histogram = hist(prueba,plot=F)
 # tanto la región de rechazo del estadı́stico, como el p-valo
 significacia = 0.08
 counts = histogram$counts
-gradosLibertad = 2
+# Se tuvieron que estimar los parametros asi que se pierden grados de libertad
+gradosLibertad = 0
 
 probabilidad = pgamma(histogram$breaks[2:8],alpha,beta) - pgamma(histogram$breaks[1:7],alpha,beta)
 esperado = total * probabilidad
 
 chi2 = sum(((counts - esperado)**2)/(esperado))
+chi2
 
 # Region De Rechazo
-chi2_alpha=qchisq(1-significacia,gradosLibertad)
+chi2_alpha=qchisq(1-significacia,length(counts) - 1 - gradosLibertad)
 chi2_alpha
 # Como el estadistico no cayo en la region de rechazo, los datos
 # pudieron haber sido generados con una distribucion gamma
-
-
-p_valor=1-pchisq(chi2, gradosLibertad)
+p_valor=1-pchisq(chi2, length(counts) - 1 - gradosLibertad)
 p_valor
 
