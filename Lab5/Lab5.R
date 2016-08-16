@@ -42,8 +42,8 @@ significacia = 0.08
 counts = histogram$counts
 gradosLibertad = 2
 
-probabilidad = (1/(gamma(alpha) * (beta**alpha))) * (counts**(alpha-1)) * exp(-(counts/beta))
-esperado = total * probabilidad
+probando = pgamma(histogram$breaks[2:8],alpha,beta) - pgamma(histogram$breaks[1:7],alpha,beta)
+esperado = total * probando
 
 chi2 = sum(((counts - esperado)**2)/(esperado))
 
@@ -54,6 +54,6 @@ chi2_alpha
 # pudieron haber sido generados con una distribucion gamma
 
 
-p_valor=1-pchisq(chi2, 111111)
+p_valor=1-pchisq(chi2, gradosLibertad)
 p_valor
 
