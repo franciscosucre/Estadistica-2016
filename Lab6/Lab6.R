@@ -4,8 +4,10 @@
 # José Cipagauta 05-38040
 
 # Set De Datos: Salud
-library(xksx) ## Cargando libreria MASS para usar fitdistr
-salud <- read.xlsx("DatosI16.xlsx", sheetIndex = 1)
+library(rJava)
+library(xlsxjars)
+library(xlsx)
+salud = read.xlsx("DatosI16.xlsx",sheetIndex = 3, startRow=3, endRow = 31, startCol = 1, endCol = 12)
 
 # 1. Realice un primer modelo con las variables cuyó |ρ| > 0,5 con respecto a la variable
 # respuesta. Para esto calcule la matriz de correlación y estudie las gráficas de las 
