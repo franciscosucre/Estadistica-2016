@@ -4,8 +4,8 @@
 # José Cipagauta 05-38040
 
 # Set De Datos: Salud
-# library(rJava)
-# library(xlsxjars) 
+library(rJava)
+library(xlsxjars) 
 library(xlsx) # Este carga ya de por si las dependencias
 salud = read.xlsx("DatosI16.xlsx", sheetIndex = 3, rowIndex = c(3:31), colIndex = c(2:12), header = T)
 # Los nombres de los paises no son relevantes para este estudio, y ademas no son datos numericos
