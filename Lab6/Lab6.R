@@ -82,7 +82,10 @@ summary(m8)
 # 4. Use los datos que aparecen en la misma hoja de datos, subrayados en azul, para hacer una 
 # predicción con ambos modelos.
 
-# Creando vector de datos para la prediccion
+# Creando vector de datos para la prediccion y realizando la prediccion para el modelo 1
 datam1 = data.frame(ILIM = 3, Desnt = 10, MortM = 102, MortH = 150, Tuber = 1, EV60 = 20)
+predict(m1, newdata = datam1, interval = c("prediction"), level = .95)
 
-predict(m1, newdata = data, interval = c("prediction"), level = .95)
+# Creando vector de datos para la prediccion y realizando la prediccion para el modelo 8
+datam8 = data.frame(ILIM = 3, Desnt = 10, MortM = 102, Tuber = 1, VIH = 0.4)
+predict(m8, newdata = datam8, interval = c("prediction"), level = .95)
